@@ -5,12 +5,15 @@ export const Form = () => {
     const [value, setValue] = useState('')
     const alert = useContext(AlertContext)
 
-
     const submitHandler = event => {
         event.preventDefault()
 
-        alert.showAlert(value, 'success')
-
+        if (value.trim()) {
+            alert.showAlert('Note created', 'success')
+            setValue('')
+        } else {
+            alert.showAlert("Enter a note title")
+        }
     }
 
     return (
