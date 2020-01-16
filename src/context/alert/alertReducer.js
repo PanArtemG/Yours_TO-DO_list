@@ -11,7 +11,7 @@ export const alertReducer = (state, action) => {
     return handle(state, action)
 }
 
-const initialState = [];
+// const initialState = [];
 
 // export const alertReducer = (state = initialState, {type, payload})=> {
 //     switch (type) {
